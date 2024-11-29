@@ -1,3 +1,4 @@
+#[derive(Clone)]
 pub struct Puzzle {
     pub chars: Vec<Vec<char>>,
     pub target: String,
@@ -9,6 +10,7 @@ impl ToString for Puzzle {
     }
 }
 
+#[derive(Clone, Debug)]
 pub struct Solution {
-    seq: Vec<(i32, i32)>
+    pub seq: Vec<(i32, i32)>
 }
