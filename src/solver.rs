@@ -12,8 +12,7 @@ impl Solver {
         for (i, start_row) in puzzle.chars.iter().enumerate() {
             for (j, point) in start_row.iter().enumerate() {
                 if *point == first {
-                    let mut placed_temp: Vec<(i32, i32)> = vec![];
-                    placed_temp.push((i as i32, j as i32));
+                    let placed_temp = vec![(i as i32, j as i32)];
                     let ret = Self::solve_internal(puzzle, placed_temp, size);
                     if let Some(solution) = ret {
                         solutions.push(solution);
